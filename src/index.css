@@ -1,0 +1,51 @@
+/* Alternating row colors for table */
+table tr:nth-child(even) {
+  background-color: #a38989;
+}
+table tr:nth-child(odd) {
+  background-color:rgb(201, 201, 232);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+body{
+  background: #f2ffeb;
+}
+table th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+
+  table th, td {
+    padding: 6px;
+  }
+}
+.button-container{
+  display: flex;
+  gap: 12px;
+}
+.button-container button{
+  cursor: pointer;
+  width: 70px;
+  height: 30px;
+  border-radius: 10px;
+  color: white;
+}
+
+.red{
+  background: red;
+}
+.green{
+  background: rgb(5, 87, 5);
+}
+.blue{
+  background: rgb(22, 22, 101);
+  color: white;
+}
