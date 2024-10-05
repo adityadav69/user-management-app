@@ -8,16 +8,22 @@ function UserDetail() {
 
   useEffect(() => {
     axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
-      .then(response => setUser(response.data))
+      .then(response => setUser(response.data))      
       .catch(error => console.error('Error fetching user:', error));
+
   }, [id]);
+
 
   return (
     user ? (
       <div>
         <h1>{user.name}</h1>
         <p>Email: {user.email}</p>
-        {/* More details */}
+        <p>website- {user.website}</p>
+        <p>Phone- {user.phone}</p>
+        <p>Username- {user.username}</p>
+
+        
       </div>
     ) : (
       <div>Loading...</div>
